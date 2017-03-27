@@ -30,6 +30,27 @@ describe('pon', function () {
     let results = yield run('foo')
     deepEqual(results, { foo: 'foo finished!' })
   }))
+
+  it('pattern', () => co(function * () {
+    let run = new Pon({
+      foo: () => co(function * () {
+        yield asleep(100)
+        return 'foo finished!'
+      })
+    }).bind()
+    let results = yield run('fo*')
+    deepEqual(results, { foo: 'foo finished!' })
+  }))
+
+  it('Nested', () => co(function * () {
+    let run = new Pon({
+      foo: {
+        bar: () => 'This is baz!'
+      }
+    }).bind()
+    let results = yield run('foo.bar')
+    deepEqual(results, { 'foo.bar': 'This is baz!' })
+  }))
 })
 
 /* global describe, before, after, it */
