@@ -6,7 +6,7 @@
 
 const Pon = require('../lib/pon.js')
 const asleep = require('asleep')
-const assert = require('assert')
+const { deepEqual } = require('assert')
 const co = require('co')
 
 describe('pon', function () {
@@ -27,8 +27,8 @@ describe('pon', function () {
         return 'foo finished!'
       })
     }).bind()
-    yield run('foo')
-
+    let results = yield run('foo')
+    deepEqual(results, { foo: 'foo finished!' })
   }))
 })
 

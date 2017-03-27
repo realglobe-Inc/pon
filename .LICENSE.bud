@@ -10,7 +10,7 @@ const { license, repository } = require('./package.json')
 module.exports = licenseBud({
   type: license,
   holder: repository.split(/\//).shift(),
-  year: 2016
+  year: 2017
 })
 
 if (!module.parent) {
