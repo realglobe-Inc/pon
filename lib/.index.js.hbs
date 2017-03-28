@@ -1,0 +1,18 @@
+/**
+ * {{pkg.description}}
+ * @module {{pkg.name}}
+ */
+
+'use strict'
+
+const define = require('./define')
+const Pon = require('./clay_resource')
+
+let lib = define.bind(this)
+
+Object.assign(lib, Pon, {
+  define,
+  Pon
+})
+
+module.exports = lib
