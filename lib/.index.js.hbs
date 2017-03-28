@@ -7,12 +7,14 @@
 
 const define = require('./define')
 const Pon = require('./clay_resource')
+const isPon = require('./is_pon')
 
 let lib = define.bind(this)
 
 Object.assign(lib, Pon, {
   define,
-  Pon
+  Pon,
+  isPon
 })
 
 module.exports = lib
