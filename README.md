@@ -235,6 +235,7 @@ pon-scaffold task "pon-task-my-own"
 
 Then, edit ***lib/define.js*** under the generated project.
 
+
 <!-- Section from "doc/guides/10.Develop Own Plugin.md.hbs" End -->
 
 
