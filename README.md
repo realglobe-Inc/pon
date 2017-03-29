@@ -50,6 +50,22 @@ Simple task runner to make you happy.
 <!-- Sections Start -->
 <a name="sections"></a>
 
+<!-- Section from "doc/guides/00.TOC.md.hbs" Start -->
+
+<a name="section-doc-guides-00-t-o-c-md"></a>
+
+Table of Contents
+----------------
+
+- [Requirements](#requirements)
+- [Getting Started](#getting-started)
+- [API Guides](#api-guides)
+- [License](#license)
+- [Links](#links)
+
+
+<!-- Section from "doc/guides/00.TOC.md.hbs" End -->
+
 <!-- Section from "doc/guides/01.Installation.md.hbs" Start -->
 
 <a name="section-doc-guides-01-installation-md"></a>
