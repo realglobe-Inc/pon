@@ -191,6 +191,44 @@ tryTrigger()
 
 <!-- Section from "doc/guides/03.Advanced Usage.md.hbs" End -->
 
+<!-- Section from "doc/guides/04.CLI Usage.md.hbs" Start -->
+
+<a name="section-doc-guides-04-c-l-i-usage-md"></a>
+
+CLI Usage
+---------
+
+Install [pon-cli](https://github.com/realglobe-Inc/pon-cli#readme) as global module.
+
+```bash
+$ npm install pon-cli -g
+```
+
+Create **Ponfile.js** at your project root and define tasks there.
+
+```javascript
+'use strict'
+
+const pon = require('pon')
+
+module.exports = pon({
+  'myapp:do-something': async function doSomething () {
+    /* ... */
+  }
+})
+
+```
+
+Then, call task from command line
+
+
+```bash
+pon 'foo'
+```
+
+
+<!-- Section from "doc/guides/04.CLI Usage.md.hbs" End -->
+
 
 <!-- Sections Start -->
 
