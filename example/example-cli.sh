@@ -1,1 +1,1 @@
-pon 'foo'
+pon "myapp:*"

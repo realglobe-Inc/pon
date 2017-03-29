@@ -195,7 +195,8 @@ Then, call task from command line
 
 
 ```bash
-pon 'foo'
+pon "myapp:*"
+
 ```
 
 
