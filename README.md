@@ -57,11 +57,17 @@ Simple task runner to make you happy.
 Table of Contents
 ----------------
 
-- [Requirements](#requirements)
-- [Getting Started](#getting-started)
-- [API Guides](#api-guides)
-- [License](#license)
-- [Links](#links)
+- [pon](#pon)
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [Advanced Usage](#advanced-usage)
+    + [Defining task in various ways](#defining-task-in-various-ways)
+  * [CLI Usage](#cli-usage)
+  * [Develop Own Plugin](#develop-own-plugin)
+    + [Install scaffold CLI](#install-scaffold-cli)
+    + [Task Plugin](#task-plugin)
+  * [License](#license)
+  * [Links](#links)
 
 
 <!-- Section from "doc/guides/00.TOC.md.hbs" End -->
@@ -201,6 +207,35 @@ pon "myapp:*"
 
 
 <!-- Section from "doc/guides/04.CLI Usage.md.hbs" End -->
+
+<!-- Section from "doc/guides/10.Develop Own Plugin.md.hbs" Start -->
+
+<a name="section-doc-guides-10-develop-own-plugin-md"></a>
+
+Develop Own Plugin
+---------
+
+Use [pon-scaffold](https://github.com/realglobe-Inc/pon-scaffold) to generate your own plugin.
+
+### Install scaffold CLI
+
+```bash
+npm i pon-scaffold -g
+```
+
+
+
+### Task Plugin
+
+Pass the task name to generate
+
+```bash
+pon-scaffold task "pon-task-my-own"
+```
+
+Then, edit ***lib/define.js*** under the generated project.
+
+<!-- Section from "doc/guides/10.Develop Own Plugin.md.hbs" End -->
 
 
 <!-- Sections Start -->
