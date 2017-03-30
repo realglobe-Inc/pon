@@ -28,18 +28,27 @@ describe('pon', function () {
       })
     }).bind()
     let results = yield run('foo')
-    deepEqual(results, { foo: ['foo finished!'] })
+    deepEqual(results, { foo: [ 'foo finished!' ] })
   }))
 
   it('pattern', () => co(function * () {
     let run = new Pon({
-      foo: () => co(function * () {
+      foo: (ctx) => co(function * () {
         yield asleep(100)
+        ctx.logger.debug('Log of foo')
         return 'foo finished!'
+      }),
+      bar: (ctx) => co(function * () {
+        yield asleep(100)
+        ctx.logger.debug('Log of bar')
+        return 'bar finished!'
       })
     }).bind()
-    let results = yield run('fo*')
-    deepEqual(results, { foo: ['foo finished!'] })
+    let results = yield run('*')
+    deepEqual(results, {
+      foo: [ 'foo finished!' ],
+      bar: [ 'bar finished!' ]
+    })
   }))
 
   it('Nested', () => co(function * () {
@@ -49,7 +58,7 @@ describe('pon', function () {
       }
     }).bind()
     let results = yield run('foo/bar')
-    deepEqual(results, { 'foo/bar': ['This is baz!'] })
+    deepEqual(results, { 'foo/bar': [ 'This is baz!' ] })
   }))
 
   it('Alias', () => co(function * () {
@@ -60,7 +69,7 @@ describe('pon', function () {
       baz: [ 'foo/bar' ]
     }).bind()
     let results = yield run('baz')
-    deepEqual(results, { 'baz': ['This is baz!'] })
+    deepEqual(results, { 'baz': [ 'This is baz!' ] })
   }))
 })
 
