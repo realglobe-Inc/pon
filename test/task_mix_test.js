@@ -5,7 +5,7 @@
 'use strict'
 
 const taskMix = require('../lib/mixins/task_mix.js')
-const assert = require('assert')
+const { deepEqual, ok } = require('assert')
 const co = require('co')
 
 describe('task-mix', function () {
@@ -20,7 +20,17 @@ describe('task-mix', function () {
   }))
 
   it('Task mix', () => co(function * () {
-
+    let TaskMixed = taskMix(class {
+    })
+    let taskMixed = new TaskMixed({})
+    ok(taskMixed)
+    taskMixed.registerTasks({
+      'ui:style': () => {},
+      'ui:style/watch': () => {},
+      'ui:react': () => {},
+      'ui:react/watch': () => {}
+    })
+    deepEqual(Object.keys(taskMixed.resolveTasks('ui:*')), [ 'ui:style', 'ui:react' ])
   }))
 })
 
