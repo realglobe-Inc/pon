@@ -57,8 +57,8 @@ describe('pon', function () {
         bar: () => 'This is baz!'
       }
     }).bind()
-    let results = yield run('foo.bar')
-    deepEqual(results, { 'foo.bar': [ 'This is baz!' ] })
+    let results = yield run('foo/bar')
+    deepEqual(results, { 'foo/bar': [ 'This is baz!' ] })
   }))
 
   it('Alias', () => co(function * () {
@@ -66,7 +66,7 @@ describe('pon', function () {
       foo: {
         bar: () => 'This is baz!'
       },
-      baz: [ 'foo.bar' ]
+      baz: [ 'foo/bar' ]
     }).bind()
     let results = yield run('baz')
     deepEqual(results, { 'baz': [ 'This is baz!' ] })

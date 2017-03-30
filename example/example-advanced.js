@@ -12,14 +12,14 @@ async function tryNested () {
       async walk () { /* ... */ },
       async run () { /* ... */ },
       // Default call
-      default: [ 'fitness.walk', 'fitness.run' ]
+      default: [ 'fitness/walk', 'fitness/run' ]
     },
     // Call another tasks
-    yellAndRun: [ 'yell', 'fitness.run' ]
+    yellAndRun: [ 'yell', 'fitness/run' ]
   })
 
   await run('yell', 'swing') // Runs tasks sequentially
-  await run('fitness.*') // By pattern
+  await run('fitness/*') // By pattern
   await run('fitness') // Same as call `await run('fitness.default')
   await run('yellAndRun') // Call another tasks
 }
