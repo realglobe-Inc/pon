@@ -1,6 +1,6 @@
 {
   "name": "pon",
-  "version": "2.1.7",
+  "version": "2.1.8",
   "description": "Simple task runner to make you happy.",
   "main": "lib",
   "browser": "ci/browser",
