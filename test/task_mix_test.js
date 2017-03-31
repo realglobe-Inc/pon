@@ -28,9 +28,12 @@ describe('task-mix', function () {
       'ui:style': () => {},
       'ui:style/watch': () => {},
       'ui:react': () => {},
-      'ui:react/watch': () => {}
+      'ui:react/watch': () => {},
+      'ui': [ 'ui:*' ],
+      'default': [ 'ui' ]
+
     })
-    deepEqual(Object.keys(taskMixed.resolveTasks('ui:*')), [ 'ui:style', 'ui:react' ])
+    deepEqual(Object.keys(taskMixed.tasksWithPatterns('ui:*')), [ 'ui:style', 'ui:react' ])
   }))
 })
 

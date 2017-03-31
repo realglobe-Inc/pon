@@ -66,10 +66,11 @@ describe('pon', function () {
       foo: {
         bar: () => 'This is baz!'
       },
-      baz: [ 'foo/bar' ]
+      baz: [ 'foo/bar' ],
+      quz: [ 'baz' ]
     }).bind()
-    let results = yield run('baz')
-    deepEqual(results, { 'baz': [ 'This is baz!' ] })
+    let results = yield run('quz')
+    deepEqual(results, { 'foo/bar': [ 'This is baz!' ] })
   }))
 })
 
