@@ -1,8 +1,11 @@
 {
   "name": "pon",
-  "version": "3.1.1",
+  "version": "3.2.0",
   "description": "Simple task runner to make you happy.",
   "main": "lib",
+  "bin": {
+    "pon": "bin/pon"
+  },
   "browser": "ci/browser",
   "scripts": {
     "test": "node ./ci/test.js",
@@ -26,6 +29,7 @@
     "abind": "^1.0.3",
     "co": "^4.6.0",
     "minimatch": "^3.0.3",
+    "pon-cli": "^2.0.1",
     "pon-context": "^1.1.1",
     "pon-runner": "^1.0.1"
   },
@@ -48,5 +52,8 @@
   "engines": {
     "node": ">=6",
     "npm": ">=4"
+  },
+  "publishConfig": {
+    "registry": "https://realglobe.artifactoryonline.com/realglobe/api/npm/npm-local"
   }
 }

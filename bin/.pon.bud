@@ -1,0 +1,17 @@
+/**
+ * Bud file for bin.
+ */
+
+"use strict";
+
+const apeTmpl = require('ape-tmpl');
+
+module.exports = apeTmpl.binBud({
+  signature: require('pon-cli/signature'),
+  path: 'pon',
+  lib: 'pon-cli'
+});
+
+if (!module.parent) {
+  require('coz').render(__filename);
+}
