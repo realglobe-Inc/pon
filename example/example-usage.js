@@ -2,17 +2,17 @@
 
 const pon = require('pon')
 
-const scss = require('pon-task-scss')
-const browserify = require('pon-task-browserify')
+const css = require('pon-task-css')
+const browser = require('pon-task-browser')
 
 async function tryExample () {
   let run = pon({
-    'ui:style': scss('ui/stylesheets', 'public'),
-    'ui:bundle': browserify('shim/entrypoints', 'public')
+    'ui:css': css('ui/stylesheets', 'public'),
+    'ui:browser': browser('shim/entrypoints', 'public')
   })
 
   // Execute task by names
-  await run('ui:style', 'ui:bundle')
+  await run('ui:css', 'ui:browser')
 }
 
 tryExample()
