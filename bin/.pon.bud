@@ -7,8 +7,9 @@
 const apeTmpl = require('ape-tmpl');
 
 module.exports = apeTmpl.binBud({
-  signature: require('../signature'),
-  path: 'pon'
+  signature: require('pon-cli/signature'),
+  path: 'pon',
+  lib: 'pon-cli'
 });
 
 if (!module.parent) {

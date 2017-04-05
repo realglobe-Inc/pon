@@ -15,7 +15,7 @@ program
   .version(pkg[ 'version' ])
   .usage('[options] <name> ')
   .description(pkg[ 'description' ])
-  .option('-l, --list', 'List available tasks')
+  .option('-l, --list [list]', 'List available tasks')
 program.parse(process.argv)
 
 // Run main command
