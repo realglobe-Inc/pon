@@ -29,9 +29,9 @@
     "abind": "^1.0.3",
     "co": "^4.6.0",
     "minimatch": "^3.0.3",
-    "pon-cli": "^2.0.1",
+    "pon-cli": "^2.0.2",
     "pon-context": "^1.1.1",
-    "pon-runner": "^1.0.1"
+    "pon-runner": "^1.2.1"
   },
   "devDependencies": {
     "ababel": "^2.0.1",
