@@ -7,10 +7,8 @@
 process.chdir(`${__dirname}/../..`)
 
 const { setEnv } = require('sugos-travis')
-const { PublicRepo, PrivateRepo } = setEnv.presets
+const { PublicRepo } = setEnv.presets
 
 setEnv({
-  // TODO OSS
-  // values: PublicRepo,
-  values: PrivateRepo
+  values: PublicRepo
 })
