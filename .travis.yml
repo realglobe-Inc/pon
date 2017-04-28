@@ -2,13 +2,9 @@ language: node_js
 node_js:
 - '6'
 before_install:
-# TODO OSS
-# - npm i npm-cli-login -g
-# - npm-cli-login -u "${NPM_USER}" -p "${NPM_PASSWORD}" -e "${NPM_EMAIL}"
-# - npm who
-- echo "registry = https://realglobe.artifactoryonline.com/realglobe/api/npm/npm-virtual" > $HOME/.npmrc
-- curl -u${NPM_USER}:${NPM_PASSWORD} "https://realglobe.artifactoryonline.com/realglobe/api/npm/auth" >> $HOME/.npmrc
-- cat $HOME/.npmrc
+ - npm i npm-cli-login -g
+ - npm-cli-login -u "${NPM_USER}" -p "${NPM_PASSWORD}" -e "${NPM_EMAIL}"
+ - npm who
 install:
 - npm install jsdoc -g
 - npm install
@@ -16,8 +12,7 @@ script:
 - ./ci/build.js
 - ./ci/shim.js
 - ./ci/test.js
-# - ./ci/doc.js
 after_success:
 - ./ci/travis/publish.js
 env:
-  secure: "kBe5yor06NaYHPRVjW2q8hUAc4/0z5S+ohdwR/X5t/E7c0Tcls9xJMYrb9epGwhizYbRW6wrdtOPMTY7uHSXIt30SS6ytdXVkl4GbDObeZvHf8qw0k7eXa6Pd/PdA1/m4IyCl/n2+sxxqkxh65ZNLtxCS+AOyKxBwixWQTrcK09IfTG129lld6DFwSRizvZsSUmtdtWVtVjfl0RGZLyqgJbfkfE/tu2Yi5H2JkFkzQef/QcPM7WZuXf4DB1i4vztK+Jjb9wWyTbxfujzDaQo8jt0ecfJ/gPP30p3jL3DBh1siSG5seSHpbcKLgiLAFHqF2DICfJYrDEuPtpbwob3eBZoaNBjL2OFZGEd/QGdyrCLUOrQSuJRlySE+SIyGUPBWxB4MR0wEd2N15FebilQRaq/4B73wd7P1nD4z1shU/f+CbI++jYhTnlue5w5JIF6iQ1W80++IW5BRd4CxdX/D9JV6c3mUnP+e+zop0fma0kuFtQTzeDPJ1LUPo1Kuici0TStead7+Pmjs+jAvJtdlPr7a+ig1+k3eejpFXzHveSfi4gIEju+A8VHaS2u6N4K3AfFJLd+B3JosHpf1Yy9vMg3Q44DWBOhCP+gmQDn0FaZeu+M2NFO+8hg+CdZEEf7V+d7YeCyBCy2SK4WXNAizqDbEM31gEQxy5AJoOR6d1w="
+  secure: "MofC5+MkBo/ExTJ0pmGwNNMIz04fhsXTEoSZWhkyE1iMKHB/Vchlzg0cWfpSDHmyqnH6wjr5CLiiUqXGdMU0ZIXJfWSHxAEjRY7lQ0mv9WZLSOfG9nDHG3gaAsbJusizxSMC0nifPVltyxdE3FAsYXO2GPG//wgl7ueFhY+1mESRrC71MNzpAH4DHC33FE6DHkcPNBIVEBvg97fW+Mzt++11XZhHqB5Fk+TZjMM63rQa5Pt6UUq3FQTkdOUSE5k+Jl71SfW4WqYLK9rbGvBB3LhwOW2qC8c0cSuDXsuZSd7JRPJe8s8Z2iLdHd9VTKu54poiIIzaz6PzgI2E6TS9BvQX/9lnorC8mbX405/DeE4hGiRGIfaVl1H4qBcQr9HXKle9W0g48M5d4pLV1+LhiQbNBx/uRTFl/WO3MHCkpfcX/Q5RhL+CP/93cRP25kQqfm1WccoNbzUzHlArhqK9ELPFJtjlQQd90B00+uRVW7gxsN9zhsWldtJU939zGDJYuR3I4fTSOBDbpTSuDRrCydWu+y8HNx4kCgV0FP0DSwdG6hzNPNQP3pJypkOiU8pURuHTaPfDqf+Ty7V4OMQ2mFeHWgEiqYNC2h7r8ypUX3ok7EndiDkIztDJxop+GqcJKXr2zc6+fbjGSPHNjtEBXDMOnJlZSPYWCCu199+LFjI="
