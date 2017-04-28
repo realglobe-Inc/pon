@@ -29,7 +29,7 @@
     "abind": "^1.0.3",
     "co": "^4.6.0",
     "minimatch": "^3.0.3",
-    "pon-cli": "^2.0.3",
+    "pon-cli": "^3.0.1",
     "pon-context": "^2.0.1",
     "pon-runner": "^2.0.1"
   },
