@@ -13,7 +13,7 @@ const pon = require('pon-cli')
 
 program
   .version(pkg[ 'version' ])
-  .usage('[options] <name> ')
+  .usage('[options] <name ...> ')
   .description(pkg[ 'description' ])
   .option('-l, --list [list]', 'List available tasks')
 program.parse(process.argv)
