@@ -3,7 +3,7 @@
 const pon = require('pon')
 
 async function tryNested () {
-  let run = pon({
+  const run = pon({
     // Just pass a async function to define custom task
     async yell () { /* ... */ },
     // Arrayed functions runs sequentially

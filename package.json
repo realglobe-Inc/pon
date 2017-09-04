@@ -28,7 +28,7 @@
   "dependencies": {
     "abind": "^1.0.3",
     "minimatch": "^3.0.4",
-    "pon-cli": "^4.0.2",
+    "pon-cli": "^4.0.3",
     "pon-context": "^2.0.2",
     "pon-runner": "^3.0.3"
   },
