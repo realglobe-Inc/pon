@@ -23,28 +23,28 @@ describe('pon', function () {
   it('Pon', async () => {
     let run = new Pon({
       foo: async () => {
-        yield asleep(100)
+        await asleep(100)
         return 'foo finished!'
       }
     }).bind()
-    let results = yield run('foo')
+    let results = await run('foo')
     deepEqual(results, {foo: ['foo finished!']})
   })
 
   it('pattern', async () => {
     let run = new Pon({
-      foo: (ctx) => co(function * () {
-        yield asleep(100)
+      foo: async (ctx) => {
+        await asleep(100)
         ctx.logger.debug('Log of foo')
         return 'foo finished!'
-      }),
-      bar: (ctx) => co(function * () {
-        yield asleep(100)
+      },
+      bar: async (ctx) => {
+        await asleep(100)
         ctx.logger.debug('Log of bar')
         return 'bar finished!'
-      })
+      }
     }).bind()
-    let results = yield run('*')
+    let results = await run('*')
     deepEqual(results, {
       foo: ['foo finished!'],
       bar: ['bar finished!']
@@ -57,7 +57,7 @@ describe('pon', function () {
         bar: () => 'This is baz!'
       }
     }).bind()
-    let results = yield run('foo/bar')
+    let results = await run('foo/bar')
     deepEqual(results, {'foo/bar': ['This is baz!']})
   })
 
@@ -69,7 +69,7 @@ describe('pon', function () {
       baz: ['foo/bar'],
       quz: ['baz']
     }).bind()
-    let results = yield run('quz')
+    let results = await run('quz')
     deepEqual(results, {'foo/bar': ['This is baz!']})
   })
 })
