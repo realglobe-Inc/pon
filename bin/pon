@@ -16,11 +16,13 @@ program
   .usage('[options] <name ...> ')
   .description(pkg[ 'description' ])
   .option('-l, --list [list]', 'List available tasks')
+  .option('-P, --prefixless [prefixless]', 'Disable log prefix')
 program.parse(process.argv)
 
 // Run main command
 pon.apply(pon, program.args.concat({
-  list: program.list})
+  list: program.list,
+  prefixless: program.prefixless})
 ).catch(handleError)
 
 // Handlers
