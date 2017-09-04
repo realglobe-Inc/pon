@@ -6,7 +6,7 @@ const css = require('pon-task-css')
 const browser = require('pon-task-browser')
 
 async function tryExample () {
-  let run = pon({
+  const run = pon({
     'ui:css': css('ui/stylesheets', 'public'),
     'ui:browser': browser('shim/entrypoints', 'public')
   })

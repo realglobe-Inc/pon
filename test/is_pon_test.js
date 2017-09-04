@@ -12,21 +12,21 @@ const co = require('co')
 describe('is-pon', function () {
   this.timeout(3000)
 
-  before(() => co(function * () {
+  before(async () => {
 
-  }))
+  })
 
-  after(() => co(function * () {
+  after(async () => {
 
-  }))
+  })
 
-  it('Is pon', () => co(function * () {
+  it('Is pon', async () => {
     ok(isPon(new Pon({})))
     ok(!isPon(null))
     ok(!isPon(''))
     ok(!isPon(false))
     ok(!isPon({ foo: 'bar' }))
-  }))
+  })
 })
 
 /* global describe, before, after, it */

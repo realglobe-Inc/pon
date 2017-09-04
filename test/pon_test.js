@@ -6,32 +6,32 @@
 
 const Pon = require('../lib/pon.js')
 const asleep = require('asleep')
-const { deepEqual } = require('assert')
+const {deepEqual} = require('assert')
 const co = require('co')
 
 describe('pon', function () {
   this.timeout(3000)
 
-  before(() => co(function * () {
+  before(async () => {
 
-  }))
+  })
 
-  after(() => co(function * () {
+  after(async () => {
 
-  }))
+  })
 
-  it('Pon', () => co(function * () {
+  it('Pon', async () => {
     let run = new Pon({
-      foo: () => co(function * () {
+      foo: async () => {
         yield asleep(100)
         return 'foo finished!'
-      })
+      }
     }).bind()
     let results = yield run('foo')
-    deepEqual(results, { foo: [ 'foo finished!' ] })
-  }))
+    deepEqual(results, {foo: ['foo finished!']})
+  })
 
-  it('pattern', () => co(function * () {
+  it('pattern', async () => {
     let run = new Pon({
       foo: (ctx) => co(function * () {
         yield asleep(100)
@@ -46,32 +46,32 @@ describe('pon', function () {
     }).bind()
     let results = yield run('*')
     deepEqual(results, {
-      foo: [ 'foo finished!' ],
-      bar: [ 'bar finished!' ]
+      foo: ['foo finished!'],
+      bar: ['bar finished!']
     })
-  }))
+  })
 
-  it('Nested', () => co(function * () {
+  it('Nested', async () => {
     let run = new Pon({
       foo: {
         bar: () => 'This is baz!'
       }
     }).bind()
     let results = yield run('foo/bar')
-    deepEqual(results, { 'foo/bar': [ 'This is baz!' ] })
-  }))
+    deepEqual(results, {'foo/bar': ['This is baz!']})
+  })
 
-  it('Alias', () => co(function * () {
+  it('Alias', async () => {
     let run = new Pon({
       foo: {
         bar: () => 'This is baz!'
       },
-      baz: [ 'foo/bar' ],
-      quz: [ 'baz' ]
+      baz: ['foo/bar'],
+      quz: ['baz']
     }).bind()
     let results = yield run('quz')
-    deepEqual(results, { 'foo/bar': [ 'This is baz!' ] })
-  }))
+    deepEqual(results, {'foo/bar': ['This is baz!']})
+  })
 })
 
 /* global describe, before, after, it */
