@@ -30,21 +30,21 @@
     "minimatch": "^3.0.4",
     "pon-cli": "^4.0.4",
     "pon-context": "^2.0.2",
-    "pon-runner": "^3.0.5"
+    "pon-runner": "^3.1.0"
   },
   "devDependencies": {
     "ababel": "^2.0.2",
     "ababel-es2015": "^2.0.2",
-    "amocha": "^2.0.0",
+    "amocha": "^4.0.0",
     "ape-formatting": "^1.0.2",
     "ape-releasing": "^4.0.4",
     "ape-tasking": "^4.0.9",
-    "ape-tmpl": "^6.0.0",
+    "ape-tmpl": "^6.0.2",
     "ape-updating": "^4.1.1",
     "asleep": "^1.0.3",
     "coz": "^6.0.20",
     "injectmock": "^2.0.0",
-    "markdown-toc": "^1.1.0",
+    "markdown-toc": "^1.2.0",
     "sg-templates": "^1.4.4",
     "sugos-travis": "^2.0.7"
   },
