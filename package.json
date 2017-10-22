@@ -28,12 +28,12 @@
   "dependencies": {
     "abind": "^1.0.3",
     "minimatch": "^3.0.4",
-    "pon-cli": "^4.0.6",
+    "pon-cli": "^4.1.1",
     "pon-context": "^2.0.2",
     "pon-runner": "^3.2.1"
   },
   "devDependencies": {
-    "ababel": "^2.0.2",
+    "ababel": "^2.0.3",
     "ababel-es2015": "^2.0.2",
     "amocha": "^4.0.0",
     "ape-formatting": "^1.0.2",
