@@ -1,6 +1,6 @@
 {
   "name": "pon",
-  "version": "5.0.3",
+  "version": "5.0.4",
   "description": "Simple task runner to make you happy.",
   "main": "lib",
   "bin": {
