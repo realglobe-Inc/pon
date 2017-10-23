@@ -7,6 +7,7 @@
 
 const define = require('./define')
 const Pon = require('./pon')
+const ponfile = require('./ponfile')
 const isPon = require('./is_pon')
 
 const lib = define.bind(this)
@@ -14,6 +15,7 @@ const lib = define.bind(this)
 Object.assign(lib, Pon, {
   define,
   Pon,
+  ponfile,
   isPon
 })
 

@@ -1,6 +1,6 @@
 {
   "name": "pon",
-  "version": "5.0.5",
+  "version": "5.1.0",
   "description": "Simple task runner to make you happy.",
   "main": "lib",
   "bin": {
@@ -16,7 +16,7 @@
     "Pon"
   ],
   "author": {
-    "name": "Taka Okunishi",
+    "name": "Tfaka Okunishi",
     "email": "okunishinishi@gmail.com",
     "url": "http://okunishitaka.com"
   },
@@ -30,7 +30,8 @@
     "minimatch": "^3.0.4",
     "pon-cli": "^4.1.1",
     "pon-context": "^2.0.2",
-    "pon-runner": "^3.2.1"
+    "pon-runner": "^3.2.1",
+    "ponfile": "^4.0.4"
   },
   "devDependencies": {
     "ababel": "^2.0.3",
