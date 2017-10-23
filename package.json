@@ -30,7 +30,7 @@
     "minimatch": "^3.0.4",
     "pon-cli": "^4.1.1",
     "pon-context": "^2.0.2",
-    "pon-runner": "^3.2.1",
+    "pon-runner": "^3.2.2",
     "ponfile": "^4.0.4"
   },
   "devDependencies": {
