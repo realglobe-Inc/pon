@@ -1,7 +1,7 @@
 {
   "name": "pon",
   "version": "5.1.2",
-  "description": "Simple task runner to make you happy.",
+  "description": "Super simple task runner to call named functions from CLI",
   "main": "lib",
   "bin": {
     "pon": "bin/pon"
@@ -28,10 +28,10 @@
   "dependencies": {
     "abind": "^1.0.3",
     "minimatch": "^3.0.4",
-    "pon-cli": "^4.1.2",
+    "pon-cli": "*",
     "pon-context": "^2.0.2",
     "pon-runner": "^3.3.1",
-    "ponfile": "^4.0.4"
+    "ponfile": "*"
   },
   "devDependencies": {
     "ababel": "^2.0.3",
