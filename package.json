@@ -29,10 +29,10 @@
     "abind": "^1.0.3",
     "argx": "^3.0.2",
     "minimatch": "^3.0.4",
-    "pon-cli": "^4.1.9",
+    "pon-cli": "^4.1.11",
     "pon-context": "^2.0.2",
-    "pon-runner": "^3.4.4",
-    "ponfile": "^4.1.8"
+    "pon-runner": "^3.4.6",
+    "ponfile": "^4.1.10"
   },
   "devDependencies": {
     "ababel": "^4.0.6",
@@ -40,7 +40,7 @@
     "ape-formatting": "^1.0.2",
     "ape-releasing": "^4.0.4",
     "ape-tasking": "^4.0.9",
-    "ape-tmpl": "^6.0.8",
+    "ape-tmpl": "^6.0.10",
     "ape-updating": "^4.1.1",
     "asleep": "^1.0.3",
     "coz": "^6.0.20",
