@@ -29,10 +29,10 @@
     "abind": "^1.0.3",
     "argx": "^3.0.2",
     "minimatch": "^3.0.4",
-    "pon-cli": "^4.1.11",
+    "pon-cli": "^4.1.12",
     "pon-context": "^2.0.2",
-    "pon-runner": "^3.4.6",
-    "ponfile": "^4.2.1"
+    "pon-runner": "^3.4.9",
+    "ponfile": "^4.2.3"
   },
   "devDependencies": {
     "ababel": "^4.0.7",
