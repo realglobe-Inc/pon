@@ -1,6 +1,6 @@
 {
   "name": "pon",
-  "version": "5.2.9",
+  "version": "5.2.10",
   "description": "Super simple task runner to call named functions from CLI",
   "main": "lib",
   "bin": {
