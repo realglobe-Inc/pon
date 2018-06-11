@@ -9,7 +9,6 @@ install:
 script:
 - "./ci/build.js"
 - "./ci/shim.js"
-- "./ci/doc.js"
 - "./ci/test.js"
 after_success:
 - publish-if-needed
