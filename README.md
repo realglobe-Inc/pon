@@ -53,7 +53,7 @@ Super simple task runner to call named functions from CLI
 
 <!-- Section from "doc/guides/00.TOC.md.hbs" Start -->
 
-<a name="section-doc-guides-00-t-o-c-md"></a>
+<a name="section-doc-guides-00-toc-md"></a>
 
 Table of Contents
 ----------------
@@ -172,7 +172,7 @@ tryNested()
 
 <!-- Section from "doc/guides/04.CLI Usage.md.hbs" Start -->
 
-<a name="section-doc-guides-04-c-l-i-usage-md"></a>
+<a name="section-doc-guides-04-cli-usage-md"></a>
 
 CLI Usage
 ---------
