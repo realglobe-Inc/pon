@@ -1,6 +1,6 @@
 {
   "name": "pon",
-  "version": "5.2.13",
+  "version": "5.2.14",
   "description": "Super simple task runner to call named functions from CLI",
   "main": "lib",
   "bin": {
@@ -29,19 +29,19 @@
     "abind": "^1.0.3",
     "argx": "^4.0.0",
     "minimatch": "^3.0.4",
-    "pon-cli": "^4.1.17",
+    "pon-cli": "^4.1.18",
     "pon-context": "^3.0.2",
-    "pon-runner": "^3.4.14",
+    "pon-runner": "^3.4.15",
     "ponfile": "^4.2.6"
   },
   "devDependencies": {
     "ababel": "^5.0.10",
     "amocha": "^5.0.1",
     "ape-formatting": "^2.0.1",
-    "ape-releasing": "^5.0.4",
-    "ape-tasking": "^4.0.11",
+    "ape-releasing": "^5.0.6",
+    "ape-tasking": "^4.0.12",
     "ape-tmpl": "^6.0.13",
-    "ape-updating": "^5.0.2",
+    "ape-updating": "^5.0.3",
     "asleep": "^1.0.3",
     "coz": "^7.0.14",
     "injectmock": "^2.0.0",
