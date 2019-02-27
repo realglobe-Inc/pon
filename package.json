@@ -29,9 +29,9 @@
     "abind": "^1.0.4",
     "argx": "^4.0.0",
     "minimatch": "^3.0.4",
-    "pon-cli": "^4.1.19",
+    "pon-cli": "^4.1.20",
     "pon-context": "^3.0.2",
-    "pon-runner": "^3.4.15",
+    "pon-runner": "^3.4.17",
     "ponfile": "^4.2.6"
   },
   "devDependencies": {
