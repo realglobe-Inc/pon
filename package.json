@@ -27,16 +27,16 @@
   "homepage": "https://github.com/realglobe-Inc/pon#readme",
   "dependencies": {
     "abind": "^1.0.5",
-    "argx": "^4.0.0",
+    "argx": "^4.0.2",
     "minimatch": "^3.0.4",
     "pon-cli": "^4.1.20",
     "pon-context": "^3.0.2",
     "pon-runner": "^3.4.17",
-    "ponfile": "^4.2.6"
+    "ponfile": "^4.2.7"
   },
   "devDependencies": {
-    "ababel": "^5.0.12",
-    "amocha": "^5.0.2",
+    "ababel": "^6.0.3",
+    "amocha": "^6.0.0",
     "ape-formatting": "^2.0.2",
     "ape-releasing": "^5.0.7",
     "ape-tasking": "^4.0.12",
