@@ -1,6 +1,6 @@
 {
   "name": "pon",
-  "version": "5.2.16",
+  "version": "5.2.17",
   "description": "Super simple task runner to call named functions from CLI",
   "main": "lib",
   "bin": {
@@ -35,8 +35,8 @@
     "ponfile": "^4.3.0"
   },
   "devDependencies": {
-    "ababel": "^6.1.2",
-    "amocha": "^7.0.2",
+    "ababel": "^6.1.4",
+    "amocha": "^7.1.1",
     "ape-formatting": "^2.0.2",
     "ape-releasing": "^5.0.7",
     "ape-tasking": "^4.0.12",
